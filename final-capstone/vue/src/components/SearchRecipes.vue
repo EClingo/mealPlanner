@@ -13,7 +13,17 @@
       <button>Submit</button>
     </form>
     </v-row>
-    
+    <v-card>
+      <v-card-title>
+        <h2> Search For a Recipe</h2>
+      </v-card-title>
+      <v-card-text>
+        <v-form class="px-3">
+          <v-text-field label="Keyword Search Here" v-model="searchTerm"></v-text-field>
+        </v-form>
+        <v-btn class="success" @click="searchRecipes()">Submit</v-btn>
+      </v-card-text>
+    </v-card>
 
     <div class="output" v-for="recipe in recipes" v-bind:key="recipe.id">
       <h2>{{ recipe.title }}</h2>
